@@ -1,0 +1,1 @@
+ffmpeg -r 1 -loop 1 -i image.png -f dshow -i audio="AUDIO_DEVICE" -c:v libx264 -c:a aac -ac 1 -ab 48k -b:v 1k -pix_fmt yuv420p -strict experimental -f flv "STREAM_URL/STREAM_KEY"
